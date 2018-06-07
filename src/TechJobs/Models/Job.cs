@@ -1,4 +1,6 @@
-﻿namespace TechJobs.Models
+﻿using TechJobs.Models;
+
+namespace TechJobs.Models
 {
     public class Job
     {
@@ -11,11 +13,14 @@
         public CoreCompetency CoreCompetency { get; set; }
         public PositionType PositionType { get; set; }
 
+        public string Title { get; set; }
+
         public Job()
         {
             ID = nextId;
             nextId++;
         }
+
 
     }
 }
