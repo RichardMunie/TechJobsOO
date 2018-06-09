@@ -79,15 +79,15 @@ namespace TechJobs.ViewModels
 
         }
 
-        public Job JobToAdd(NewJobViewModel newJobViewModel)
+        public Job JobToAdd()
         {
             JobData jobData = JobData.GetInstance();
             Job newJob = new Job();
-            newJob.Name = newJobViewModel.Name;
-            newJob.Employer = jobData.Employers.Find(newJobViewModel.EmployerID);
-            newJob.Location = jobData.Locations.Find(newJobViewModel.LocationID);
-            newJob.CoreCompetency = jobData.CoreCompetencies.Find(newJobViewModel.CoreCompetencyID);
-            newJob.PositionType = jobData.PositionTypes.Find(newJobViewModel.PositionTypeID);
+            newJob.Name = this.Name;
+            newJob.Employer = jobData.Employers.Find(this.EmployerID);
+            newJob.Location = jobData.Locations.Find(this.LocationID);
+            newJob.CoreCompetency = jobData.CoreCompetencies.Find(this.CoreCompetencyID);
+            newJob.PositionType = jobData.PositionTypes.Find(this.PositionTypeID);
             return newJob;
         }
 
